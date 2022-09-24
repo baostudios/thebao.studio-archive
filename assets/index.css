@@ -144,7 +144,7 @@ body {
     width: 300%;
     left: -50%;
     top: -100%;
-    opacity: 0.15;
+    opacity: 0.2;
     position: fixed;
     z-index: 1000;
 }
