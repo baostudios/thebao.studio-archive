@@ -15,22 +15,32 @@
           property="og:image">
     <meta content="summary_large_image" name="twitter:card">
     <meta content="#febf1a" name="theme-color">
-    <script crossorigin="" src="/assets/index.js" type="module"></script>
     <link href="/assets/index.css" rel="stylesheet">
+    <script crossorigin="" src="/assets/index.js" type="module"></script>
 </head>
 <body>
-<div id="app">
-    <object class="bgLogo" type="image/svg+xml" data="/assets/svg/logo.svg"></object>
-    <div class="noiseBg" style="background-position: 3% 81%;"></div>
-
-    <div class="container">
-        <div class="header">
-            <div class="title1">the</div>
-            <div class="title2">bao</div>
-            <div class="title3">studio</div>
+<div class="noiseBg" style="background-position: 3% 81%;"></div>
+    <div id="app" class="hidden">
+        <div class="container">
+            <div class="landing">
+                <div class="header">
+                    <div class="title1">the</div>
+                    <div class="title2">bao</div>
+                    <div class="title3">studio</div>
+                </div>
+                <div class="divider"></div>
+            </div>
+            <div class="introduction">
+            </div>
         </div>
     </div>
-</div>
-<!--vue js-->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollToPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/MotionPathPlugin.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<!--TODO: webgl to make the bao logo look all rainbow and whatever-->
 </body>
 </html>
