@@ -106,9 +106,9 @@ function sleep(ms) {
 }
 
 const transitionElements = [
-    { name: "title1", x: -150, y: 0, r: -7, d: 1.8 },
-    { name: "title2", x: 0, y: -300, r: 12, d: 2.6 },
-    { name: "title3", x: -500, y: 0, r: 5, d: 2.0 },
+    { name: "title1", x: -500, y: 0, r: -7, d: 1.8 },
+    { name: "title2", x: 0, y: -700, r: 12, d: 2.6 },
+    { name: "title3", x: -600, y: 0, r: 5, d: 2.0 },
 ]
 
 const scrollHeadingElements = [
