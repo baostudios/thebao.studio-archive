@@ -84,11 +84,13 @@ $(document).ready(function () {
                     _trigger["name"],
                     _trigger["x"],
                     _trigger["y"],
-                    _trigger["d"],
                     _trigger["r"],
+                    _trigger["d"],
                 );
             }
         );
+
+        gsap.to(".rotating", {repeat: -1, duration: 5, rotation: 270, ease: "expo.inOut", yoyo: true });
     };
     $.blockUI();
     $(window).load(function () {
@@ -109,12 +111,16 @@ const transitionElements = [
     { name: "title1", x: -500, y: 0, r: -7, d: 1.8 },
     { name: "title2", x: 0, y: -700, r: 12, d: 2.6 },
     { name: "title3", x: -600, y: 0, r: 5, d: 2.0 },
+    { name: "rotating", x: 0, y: -1800, r: 0, d: 3.8 },
+    { name: "logo", x: 900, y: 0, r: 0, d: 3.2 },
 ]
 
 const scrollHeadingElements = [
-    { name: "title1", trigger: "header", scrub: 4, x: -250, y: 0, r: 0 },
-    { name: "title2", trigger: "header", scrub: 1.5, x: 0, y: -300, r: 0 },
-    { name: "title3", trigger: "header", scrub: 3, x: 400, y: 0, r: 0 },
+    { name: "title1", trigger: "header", scrub: 2, x: -600, y: 0, r: 0 },
+    { name: "title2", trigger: "header", scrub: 2.5, x: 0, y: -700, r: 0 },
+    { name: "title3", trigger: "header", scrub: 3, x: -900, y: 0, r: 0 },
+    { name: "rotating", trigger: "header", scrub: 3, x: 0, y: -1200, r: -90 },
+    { name: "logo", trigger: "header", scrub: 2, x: 900, y: 0, r: 0 },
 ];
 
 // register scroll trigger gsap plugin
@@ -146,7 +152,7 @@ function createScrollTrigger(element, trigger, scrub, x, y, rotation) {
     });
 }
 
-function createTransitionTween(element, x, y, d, r) {
+function createTransitionTween(element, x, y, r, d) {
     gsap.from(`.${element}`, {
         x: x,
         y: y,
